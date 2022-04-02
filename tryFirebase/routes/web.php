@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('students.index');
 });
+
+Route::get('create', 'FirebaseController@set');
+Route::get('read', 'FirebaseController@read');
+Route::get('update', 'FirebaseController@update');
+Route::get('delete', 'FirebaseController@delete');
